@@ -1,17 +1,4 @@
-/**
- * StreamFlix - Application JavaScript
- * 
- * Fonctionnalités interactives modernes:
- * - Navigation mobile responsive
- * - Contrôles de défilement horizontal
- * - Intégration API TMDB optimisée
- * - Gestion d'états avec ES6+
- * - Compatibilité cross-browser
- * - Validation et gestion d'erreurs
- * 
- * @version 2.0
- * @author StreamFlix Team
- */
+// StreamFlix - Application JavaScript principale
 
 /**
  * Module principal - IIFE pour éviter la pollution globale
@@ -23,7 +10,7 @@
   // CONFIGURATION & CONSTANTS
   // =====================
   
-  // Configuration TMDB avec validation
+  // Configuration API TMDB
   const CONFIG = Object.freeze({
     TMDB: {
       KEY: 'e4b90327227c88daac14c0bd0c1f93cd',
@@ -43,7 +30,7 @@
     }
   });
   
-  // Cache intelligent pour optimiser les performances
+  // Cache pour les requêtes API
   const apiCache = new Map();
   
   // =====================
@@ -158,6 +145,7 @@
     return p.endsWith(href);
   }
 
+  // Génération de la navbar
   function renderNavbar() {
     const navHost = document.querySelector('.navbar');
     const addTh = (href) => href; // do not modify links; rely on localStorage only
@@ -216,6 +204,7 @@
   ensureMainId();
 
 
+  // Client API TMDB avec cache
   const tmdbClient = async (path, params = {}, useCache = true) => {
     const cacheKey = `${path}:${JSON.stringify(params)}`;
     
@@ -308,6 +297,7 @@
   }
   function allowedAny(it) { return allowedMovie(it) || allowedSeries(it); }
 
+  // Remplissage section populaires (mix films/séries)
   async function fillMixedPopular(rowEl) {
     try {
       const [moviesPopular, seriesPopular] = await Promise.all([
@@ -500,6 +490,7 @@
     });
   }
 
+  // Remplissage section recommandés
   async function fillRecommendedMix(rowEl) {
     try {
       const [moviesTopRated, seriesPopular, moviesUpcoming, seriesTrending] = await Promise.all([
@@ -600,6 +591,7 @@
     return fallback;
   }
 
+  // Génération HTML des cartes
   function cardHTML(it, extraBadges = '') {
     const title = itemTitle(it);
     const sub = itemSub(it);

@@ -148,6 +148,7 @@
   to { transform: rotate(360deg); }
 }
 
+/* Reset CSS de base */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -344,6 +345,7 @@ button { font: inherit; border: 0; background: transparent; cursor: pointer; }
 .btn-ghost { background: var(--glass); color: var(--text-primary); border-color: rgba(255,255,255,0.15); }
 .btn-ghost:hover { background: var(--bg-tertiary); }
 
+/* Contenu principal */
 .main { background: linear-gradient(180deg, rgba(20,16,30,0) 0%, rgba(20,16,30,0.75) 12%, #0A0A0F 30%), var(--grad-surface); }
 .section { max-width: 1200px; margin: 0 auto; padding: var(--space-5) var(--space-2) var(--space-4); }
 .section-top { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-3); }
@@ -354,6 +356,7 @@ button { font: inherit; border: 0; background: transparent; cursor: pointer; }
 
 .hero, .section { scroll-margin-top: 80px; }
 
+/* Rangées horizontales de cartes */
 .row { display: flex; gap: var(--space-3); overflow-x: auto; padding-bottom: var(--space-1); scroll-snap-type: x proximity; }
 .row::-webkit-scrollbar { display: none; }
 
@@ -386,12 +389,13 @@ button { font: inherit; border: 0; background: transparent; cursor: pointer; }
 }
 .grid-page .card { min-width: 0; }
 
+/* Responsive mobile */
 @media (max-width: 639.98px) {
   .grid-page .row { grid-template-columns: repeat(2, 1fr); }
   .grid-page .thumb { aspect-ratio: 2 / 3; }
   .grid-page .card { min-width: 0; }
-  .main:not(.grid-page) .row .thumb { aspect-ratio: 16 / 9; }
-  .main:not(.grid-page) .row .card { min-width: 200px; }
+  .main:not(.grid-page) .row .thumb { aspect-ratio: 2 / 3; }
+  .main:not(.grid-page) .row .card { min-width: 160px; }
 }
 
 @media (min-width: 640px) and (max-width: 767.98px) {
@@ -427,6 +431,7 @@ button { font: inherit; border: 0; background: transparent; cursor: pointer; }
 
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-3); }
 
+/* Cartes de films/séries */
 .card { background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border-radius: var(--radius-lg); overflow: hidden; position: relative; border: 1px solid rgba(139,92,246,0.20); transition: var(--t-normal); box-shadow: var(--ring-purple); }
 .card:hover { transform: translateY(-6px); box-shadow: var(--glow-purple), var(--shadow-lg); border-color: rgba(139,92,246,0.45); }
 .thumb { position: relative; aspect-ratio: 16 / 9; background: #0e0f15; overflow: hidden; }
@@ -461,6 +466,7 @@ button { font: inherit; border: 0; background: transparent; cursor: pointer; }
 .badge.featured { position: absolute; top: var(--space-2); left: var(--space-2); background: var(--grad-primary); color: #fff; }
 
 
+/* Pied de page */
 .footer { margin-top: var(--space-6); background: linear-gradient(135deg, rgba(20,16,30,1), rgba(24,26,34,1)); border-top: 1px solid rgba(255,255,255,0.08); }
 .footer .inner { max-width: 1200px; margin: 0 auto; padding: var(--space-5) var(--space-2) var(--space-3); display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
 .footer .brand { max-width: 420px; }
