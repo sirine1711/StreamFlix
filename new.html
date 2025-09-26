@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StreamFlix – Nouveautés</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="url(#g1)" stroke="url(#g2)" stroke-width="2"/><path d="M12 10l8 6-8 6V10z" fill="#fff"/><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#4C1D95"/><stop offset="100%" stop-color="#7C3AED"/></linearGradient><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#A78BFA"/><stop offset="100%" stop-color="#4C1D95"/></linearGradient></defs></svg>
+        <span class="logo-text">StreamFlix</span>
+      </div>
+      <ul class="nav-menu" role="menubar">
+        <li><a class="nav-link" href="index.html#home" role="menuitem">Accueil</a></li>
+        <li><a class="nav-link" href="films.html" role="menuitem">Films</a></li>
+        <li><a class="nav-link" href="series.html" role="menuitem">Séries</a></li>
+        <li><a class="nav-link" href="list.html" role="menuitem">Ma liste</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="icon-btn" href="search.html" aria-label="Rechercher" title="Rechercher">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+        </a>
+        <button class="icon-btn" aria-label="Notifications" title="Notifications"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></button>
+        <button class="mobile-toggle" aria-label="Menu mobile"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main grid-page">
+    <section class="section" aria-labelledby="tit-new">
+      <div class="section-top"><h1 id="tit-new" class="section-title">Nouveautés</h1></div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;">
+        <button class="btn btn-ghost">Tous</button>
+        <button class="btn btn-ghost">Films</button>
+        <button class="btn btn-ghost">Séries</button>
+        <button class="btn btn-ghost">Cette semaine</button>
+      </div>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-new-page"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div id="row-new-page" class="row row-sm" style="opacity: 0; transition: opacity 0.3s ease;">
+          <!-- Rempli dynamiquement depuis TMDB par app.js (movie/now_playing) -->
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-new-page"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" aria-labelledby="tit-footer">
+    <div class="inner">
+      <div class="brand">
+        <div class="logo"><span class="logo-text">StreamFlix</span></div>
+        <p>Votre destination premium pour le divertissement. Design moderne, fluide et responsive.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h4>Découvrir</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="originals.html">Originaux</a></li>
+            <li><a href="kids.html">Enfants</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Centre d'aide</a></li>
+            <li><a href="#">Nous contacter</a></li>
+            <li><a href="#">Compte</a></li>
+            <li><a href="#">Appareils</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Emplois</a></li>
+            <li><a href="#">Presse</a></li>
+            <li><a href="#">Investisseurs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="#">Confidentialité</a></li>
+            <li><a href="#">Conditions</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Annonces</a></li>
+          </ul>
+      </div>
+      <div class="bottom"> 2025 StreamFlix. Tous droits réservés.</div>
+    </div>
+  </footer>
+  <script src="app.js" defer></script>
+  <script>document.documentElement.setAttribute('data-theme','dark');</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const row = document.querySelector('#row-new-page');
+      
+      // Hide initial content immediately
+      if (row) {
+        row.style.opacity = '0';
+        
+        setTimeout(() => {
+          const allBtn = document.querySelector('.section .btn.btn-ghost');
+          if (allBtn && allBtn.textContent.toLowerCase().includes('tous')) {
+            allBtn.click();
+            
+            // Show content after click with a small delay
+            setTimeout(() => {
+              if (row) {
+                row.style.opacity = '1';
+              }
+            }, 200);
+          }
+        }, 100);
+      }
+    });
+  </script>
+</body>
+</html>

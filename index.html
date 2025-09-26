@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Meta tags essentiels -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="StreamFlix - Plateforme de streaming moderne avec films et séries en haute qualité. Découvrez les dernières nouveautés et classiques du cinéma." />
+  <meta name="keywords" content="streaming, films, séries, cinéma, divertissement, TMDB" />
+  <meta name="author" content="StreamFlix" />
+  
+  <!-- Open Graph pour réseaux sociaux -->
+  <meta property="og:title" content="StreamFlix - Votre plateforme de streaming" />
+  <meta property="og:description" content="Découvrez des milliers de films et séries en streaming haute qualité" />
+  <meta property="og:type" content="website" />
+  
+  <title>StreamFlix – Votre plateforme de streaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://api.themoviedb.org" />
+  <link rel="preconnect" href="https://image.tmdb.org" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation principale avec accessibilité -->
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <circle cx="16" cy="16" r="15" fill="url(#g1)" stroke="url(#g2)" stroke-width="2"/>
+          <path d="M12 10l8 6-8 6V10z" fill="#fff"/>
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#4C1D95"/>
+              <stop offset="100%" stop-color="#7C3AED"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#A78BFA"/>
+              <stop offset="100%" stop-color="#4C1D95"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-text">StreamFlix</span>
+      </div>
+
+      <ul class="nav-menu" role="menubar" aria-label="Menu principal">
+        <li><a class="nav-link active" href="index.html#home" role="menuitem" aria-current="page">Accueil</a></li>
+        <li><a class="nav-link" href="films.html" role="menuitem">Films</a></li>
+        <li><a class="nav-link" href="series.html" role="menuitem">Séries</a></li>
+        
+      </ul>
+
+      <div class="nav-actions">
+        <a class="icon-btn" href="search.html" aria-label="Rechercher" title="Rechercher">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+          </svg>
+        </a>
+        <button class="mobile-toggle" aria-label="Menu mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero hero-carousel" id="home" role="banner" aria-label="Contenu mis en avant">
+    <div class="carousel" role="region" aria-label="Carousel des films tendance">
+      <div class="slides" role="tabpanel" aria-live="polite">
+        <article class="slide active" role="tabpanel" aria-labelledby="slide-1-title" style="--bg:url('https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')">
+          <div class="slide-overlay">
+            <div class="badges"><span class="badge primary">Tendance</span><span class="badge secondary">Sci‑Fi</span></div>
+            <h1 id="slide-1-title" class="hero-title">Horizon Infini</h1>
+            <p class="hero-desc">Exploration épique aux confins de la galaxie. Aventures et mystères.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" aria-label="Regarder Horizon Infini"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Regarder</button>
+              <button class="btn btn-ghost">Plus d'infos</button>
+            </div>
+          </div>
+        </article>
+        <article class="slide" style="--bg:url('https://images.pexels.com/photos/2228842/pexels-photo-2228842.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')">
+          <div class="slide-overlay">
+            <div class="badges"><span class="badge primary">Tendance</span><span class="badge secondary">Fantasy</span></div>
+            <h2 class="hero-title">Royaume Perdu</h2>
+            <p class="hero-desc">Une quête à travers des terres oubliées et des légendes millénaires.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Regarder</button>
+              <button class="btn btn-ghost">Plus d'infos</button>
+            </div>
+          </div>
+        </article>
+        
+        <article class="slide" style="--bg:url('https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')">
+          <div class="slide-overlay">
+            <div class="badges"><span class="badge primary">Tendance</span><span class="badge secondary">Docu</span></div>
+            <h2 class="hero-title">Mystères Anciens</h2>
+            <p class="hero-desc">Remontez le temps pour percer les énigmes de notre monde.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary">Regarder</button>
+              <button class="btn btn-ghost">Plus d'infos</button>
+            </div>
+          </div>
+        </article>
+        <article class="slide" style="--bg:url('https://images.pexels.com/photos/15953923/pexels-photo-15953923.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')">
+          <div class="slide-overlay">
+            <div class="badges"><span class="badge primary">Tendance</span><span class="badge secondary">Action</span></div>
+            <h2 class="hero-title">Fracture</h2>
+            <p class="hero-desc">Quand l'équilibre se brise, il faut choisir son camp.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary">Regarder</button>
+              <button class="btn btn-ghost">Plus d'infos</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <button class="carousel-ctrl prev" aria-label="Précédent">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="carousel-ctrl next" aria-label="Suivant">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+      <div class="dots" role="tablist" aria-label="Sélection de diapo"></div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div id="home" aria-hidden="true" style="height:0; padding:0; margin:0;"></div>
+    <!-- Continue Watching -->
+    <section class="section" aria-labelledby="tit-continue">
+      <h2 id="tit-continue" class="section-title">Continuer à regarder</h2>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-continue">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div id="row-continue" class="row row-sm">
+        <article class="card" aria-label="Aventures Cosmiques">
+          <div class="thumb">
+            <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=600&h=338&fit=crop" alt="Aventures Cosmiques" />
+            <div class="progressbar"><div class="bar" style="--progress: 65%"></div></div>
+            <div class="overlay">
+              <div class="actions">
+                <button class="icon-pill play" aria-label="Lire">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+              <div class="meta">
+                <div class="title">Aventures Cosmiques</div>
+                <div class="sub">S1 E3 • 42min restantes</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" aria-label="Monde Enchanté">
+          <div class="thumb">
+            <img src="https://images.pexels.com/photos/2228842/pexels-photo-2228842.jpeg?auto=compress&cs=tinysrgb&w=600&h=338&fit=crop" alt="Monde Enchanté" />
+            <div class="progressbar"><div class="bar" style="--progress: 30%"></div></div>
+            <div class="overlay">
+              <div class="actions">
+                <button class="icon-pill play" aria-label="Lire">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+              <div class="meta">
+                <div class="title">Monde Enchanté</div>
+                <div class="sub">1h 28min restantes</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" aria-label="Légendes Urbaines">
+          <div class="thumb">
+            <img src="https://images.pexels.com/photos/1308881/pexels-photo-1308881.jpeg?auto=compress&cs=tinysrgb&w=600&h=338&fit=crop" alt="Légendes Urbaines" />
+            <div class="progressbar"><div class="bar" style="--progress: 80%"></div></div>
+            <div class="overlay">
+              <div class="actions">
+                <button class="icon-pill play" aria-label="Lire">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+              </div>
+              <div class="meta">
+                <div class="title">Légendes Urbaines</div>
+                <div class="sub">S2 E5 • 15min restantes</div>
+              </div>
+            </div>
+          </div>
+        </article>
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-continue">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section" id="top10" role="region" aria-labelledby="tit-top10">
+      <div class="section-top"><h2 id="tit-top10" class="section-title">Top 10 en France aujourd'hui</h2><a class="more" href="top10.html">Voir tout</a></div>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-top10">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div id="row-top10" class="row row-sm">
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-top10">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="new" role="region" aria-labelledby="tit-new">
+      <div class="section-top"><h2 id="tit-new" class="section-title">Nouveautés</h2><a class="more" href="new.html">Voir tout</a></div>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-new">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div id="row-new" class="row row-sm">
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-new">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="popular" role="region" aria-labelledby="tit-popular">
+      <div class="section-top"><h2 id="tit-popular" class="section-title">Populaires</h2><a class="more" href="popular.html">Voir tout</a></div>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-popular">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div id="row-popular" class="row row-sm">
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-popular">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="recommended" aria-labelledby="tit-reco">
+      <div class="section-top"><h2 id="tit-reco" class="section-title">Recommandés pour vous</h2><a class="more" href="recommended.html">Voir tout</a></div>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-reco">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div id="row-reco" class="row row-sm">
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-reco">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="action" aria-labelledby="tit-action">
+      <div class="section-top"><h2 id="tit-action" class="section-title">Action</h2><a class="more" href="action.html">Voir tout</a></div>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-action">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div id="row-action" class="row row-sm">
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-action">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="comedy" aria-labelledby="tit-comedy">
+      <div class="section-top"><h2 id="tit-comedy" class="section-title">Comédie</h2><a class="more" href="comedy.html">Voir tout</a></div>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-comedy">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div id="row-comedy" class="row row-sm">
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-comedy">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="documentaries" aria-labelledby="tit-docs">
+      <div class="section-top"><h2 id="tit-docs" class="section-title">Documentaires</h2><a class="more" href="documentaries.html">Voir tout</a></div>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-docs">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div id="row-docs" class="row row-sm">
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-docs">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="originals" aria-labelledby="tit-originals">
+      <div class="section-top"><h2 id="tit-originals" class="section-title">Originaux StreamFlix</h2><a class="more" href="originals.html">Voir tout</a></div>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-originals">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div id="row-originals" class="row row-sm">
+          <article class="card featured">
+            <div class="thumb">
+              <img src="https://images.pexels.com/photos/7991579/pexels-photo-7991579.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop" alt="Chroniques Galactiques" />
+              <span class="badge featured">Original</span>
+              <div class="overlay">
+                <div class="actions"><button class="icon-pill play" aria-label="Lire"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button></div>
+                <div class="meta"><div class="title">Chroniques Galactiques</div><div class="sub">Série • ★ 9.1</div></div>
+              </div>
+            </div>
+          </article>
+          <article class="card featured">
+            <div class="thumb">
+              <img src="https://images.pexels.com/photos/2228842/pexels-photo-2228842.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop" alt="Dimensions Parallèles" />
+              <span class="badge featured">Original</span>
+              <div class="overlay">
+                <div class="actions"><button class="icon-pill play" aria-label="Lire"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button></div>
+                <div class="meta"><div class="title">Dimensions Parallèles</div><div class="sub">Film • ★ 8.9</div></div>
+              </div>
+            </div>
+          </article>
+          <article class="card featured">
+            <div class="thumb">
+              <img src="https://images.pexels.com/photos/1308881/pexels-photo-1308881.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&fit=crop" alt="Légendes Modernes" />
+              <span class="badge featured">Original</span>
+              <div class="overlay">
+                <div class="actions"><button class="icon-pill play" aria-label="Lire"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button></div>
+                <div class="meta"><div class="title">Légendes Modernes</div><div class="sub">Série • ★ 8.7</div></div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-originals">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="kids" aria-labelledby="tit-kids">
+      <div class="section-top"><h2 id="tit-kids" class="section-title">StreamFlix Kids</h2><a class="more" href="kids.html">Voir tout</a></div>
+      <div class="row-wrap">
+        <button class="row-ctrl prev" aria-label="Précédent" data-scroll="#row-kids">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div id="row-kids" class="row row-sm">
+        </div>
+        <button class="row-ctrl next" aria-label="Suivant" data-scroll="#row-kids">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo" aria-labelledby="tit-footer">
+    <div class="inner">
+      <div class="brand">
+        <div class="logo"><span class="logo-text">StreamFlix</span></div>
+        <p>Votre destination premium pour le divertissement. Design moderne, fluide et responsive.</p>
+      </div>
+      <div class="cols">
+        <div>
+          <h4>Découvrir</h4>
+          <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#originals">Originaux</a></li>
+            <li><a href="#kids">Enfants</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Centre d'aide</a></li>
+            <li><a href="#">Nous contacter</a></li>
+            <li><a href="#">Compte</a></li>
+            <li><a href="#">Appareils</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Entreprise</h4>
+          <ul>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Emplois</a></li>
+            <li><a href="#">Presse</a></li>
+            <li><a href="#">Investisseurs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Légal</h4>
+          <ul>
+            <li><a href="#">Confidentialité</a></li>
+            <li><a href="#">Conditions</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Annonces</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom"> 2025 StreamFlix. Tous droits réservés.</div>
+    </div>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
